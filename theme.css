@@ -1,25 +1,20 @@
-/* 
-    主题说明：
-    1. 注释前标有暂改的，有可能会在以后版本更新中修复。
-    已知缺陷：
-    1. 打开三个以上页面后，重启思源，resize会被挤压，页面会发生右移，需要重置窗口。
-*/
 :root {
     /* 主色 */
-    --b3-theme-primary: #e34f8c;
-    --b3-theme-primary-light: rgba(66, 133, 244, 0.54);
-    --b3-theme-primary-lighter: rgba(66, 133, 244, 0.38);
-    --b3-theme-primary-lightest: rgba(66, 133, 244, 0.12);
-    --b3-theme-secondary: #f3a92f;
-    --b3-theme-background: #212224;
-    --b3-theme-surface: #292a2d;
+    --b3-theme-primary: var(--Lavender-highLight-color);
+    --b3-theme-primary-light: #324b75;
+    --b3-theme-primary-lighter: #324b75;
+    --b3-theme-primary-lightest: #E34F8C20;
+    --b3-theme-secondary: var(--Lavender-highLight-color);
+    --b3-theme-background: var(--Lavender-main-color);
+    --b3-theme-surface: var(--Lavender-main-color);
     --b3-theme-error: #d23f31;
+
 
     /* 文字颜色 */
     --b3-theme-on-primary: #fff;
     --b3-theme-on-secondary: #fff;
-    --b3-theme-on-background: #e8eaed;
-    --b3-theme-on-surface: #fff;
+    --b3-theme-on-background: #c9d1d9;
+    --b3-theme-on-surface: #9aa0a6;
     --b3-theme-on-error: #fff;
 
     /* 字体 */
@@ -30,23 +25,24 @@
     --b3-border-color: rgba(255, 255, 255, .12);
 
     /* 滚动条 */
-    --b3-scroll-color: rgba(230, 230, 230, .3);
+    --b3-scroll-color: #594A6C;
 
     /* 列表 */
     --b3-list-hover: rgba(255, 255, 255, .06);
 
     /* 页签 */
-    --b3-tab-background: #212224;
+    --b3-tab-background: var(--Lavender-main-color);
+    --b3-tab-background-hover: var(--Lavender-tab-background-hover);
 
     /* 提示 */
-    --b3-tooltips-color: rgba(70, 72, 76, .86);
+    --b3-tooltips-color: var(--Lavender-prompt-color);
 
     /* 动画效果 */
     --b3-transition: all .15s cubic-bezier(0, 0, .2, 1) 0ms;
 
     /* 阴影 */
-    /* --b3-point-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-    --b3-dialog-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.4); */
+    --b3-point-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    --b3-dialog-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.4);
 
     /* diff */
     --b3-diff-add: #133a1c;
@@ -70,7 +66,7 @@
     --b3-vditor-search-current-background: #204282;
 
     /* 代码片段背景 */
-    --b3-vditor-code-background: rgba(66, 133, 244, .36);
+    --b3-vditor-code-background: var(--Lavender-codeBlock-color);
 
     /* 即时渲染标记符颜色 */
     --b3-vditor-mark-heading-color: #9876aa;
@@ -95,268 +91,169 @@
     --b3-vditor-inline-mark-color: #e8eaed;
     --b3-vditor-inline-tag-color: #9aa0a6;
     --b3-vditor-inline-blockref-color: #9876aa;
+
+    /* Lavender Config*/
+    --Lavender-main-color: #27273A;
+    --Lavender-highLight-color: #E34F8C;
+    --Lavender-h-highLight-color: #008EC6;
+    --Lavender-h-underline-highLight-color: #99B6D4;
+    --Lavender-block-border-color: #8B6D9D; 
+    --Lavender-prompt-color: var(--Lavender-highLight-color);
+    --Lavender-codeBlock-color-input: #2b2d39;
+    /* 404A4B 483C30 */
+    --Lavender-codeBlock-color: #404A4B;
+    --Lavender-table-border-color: var(--Lavender-block-border-color);
+    --Lavender-table-head-color: #44233b;
+    --Lavender-table-body-color: #2e2335;
+    --Lavender-tab-background-hover: #424253;
+    --Lavender-close-color: var(--Lavender-h-underline-highLight-color);
+    --Lavender-blockquote-color: #333333;
+    
+    /* Lavender blockFocus */
+    --b3-card-error-background: #94443A;
+    --b3-card-error-color: #DADCDB;
+    --b3-card-warning-background: #002b36;
+    --b3-card-warning-color: #DADCDB;
+    --b3-card-info-background: #156F9B;
+    --b3-card-info-color: #DADCDB;
+    --b3-card-success-background: #A57B6E;
+    --b3-card-success-color: #DADCDB;
 }
 
 .language-graphviz polygon {
     fill: var(--b3-theme-on-surface);
 }
 
-/* 主色调 */
-.vditor-ir__menu button ,.file-tree, .fn__flex-1, .vditor-ir,  .b3-list__header > .fn__flex-1, .vditor-toolbar, .fn__flex.layout-tab-bar, .layout__empty, .b3-list__header, .b3-dialog__container, .b3-text-filed.fn__block {
-    background-color: #27273a;
+/* Lavender Custom */
+
+/* h */
+.vditor-ir h1, .vditor-ir h2, .vditor-ir h3, .vditor-ir h4, .vditor-ir h5, .vditor-ir h6 {
+    color: var(--Lavender-h-highLight-color);
+    border-bottom-color: var(--Lavender-h-underline-highLight-color);
 }
 
-/* 软件及块引用的顶、底栏背景色 */
-.block__title + .fn__space.fn__flex-1, .block__icons, #barSearch + .fn__flex-1, #layouts > .layout__resize, #layouts > .layout__resize::after, .layout-tab-container.fn__flex-1, #toolbar {
-    background-color: #1f2330;
+/* codeBlock */
+.vditor-ir__marker--pre.vditor-ir__marker code {
+    background-color: var(--Lavender-codeBlock-color-input);
 }
-.fn__flex ~ .fn__flex .layout-tab-container {
-    background-color: #333345;
-}
-
-/* 去掉设置->账号处的割裂感 */
-.config-account__center--text {
-    border-left: 1px solid #414152;
-    background-color: #27273a;
+.vditor-ir__preview code {
+    background-color: var(--Lavender-codeBlock-color);
 }
 
-/* 块引用突出显示 */
-.block__popover.block__popover--move.block__popover--open {
-    border: .35rem solid #414152;
-    /* border-radius: .6rem; */
+/* List */
+.vditor ul, .vditor ol {
+    padding-left: 1.5em;
+}
+.vditor ul li {
+    list-style-type: disc !important;
+    margin-left: 1em;
+}
+.vditor ol li {
+    margin-left: 1em;
+}
+.vditor ul ul, .vditor ol ul, .vditor ul ol, .vditor ol ol {
+    border-left: 1.5px solid #999;
+    margin-left: -.825em;
 }
 
-/* 暂改：块引用Z-index防止被其他UI遮挡 */
-.block__popover.block__popover--move.block__popover--open {
-    z-index: 1000;
+/* blockRef */
+.block__popover, .vditor-ir div[data-type="block-ref-embed"]>div[data-render], .vditor-ir div[data-type="block-query-embed"]>div[data-render] {
+    border: 1.35px solid var(--Lavender-block-border-color);
+    border-radius: 0;
 }
 
-/* 顶栏工具的简单交互 */
-#toolbar div, .ft__primary {
-    color: #fff;
-    transition: color .2s linear;
+/* table */
+.vditor-reset table thead tr {
+    background-color: var(--Lavender-table-head-color) !important;
 }
-#toolbar div:hover, .ft__primary:hover {
-    color: #e34f8c;
+.vditor-reset table tbody tr {
+    background-color: var(--Lavender-table-body-color) !important;
 }
-
-/* 工具栏的简单交互 */
-.vditor-toolbar .vditor-toolbar__item button svg {
-    color: #fff;
-    transition: color .2s linear;
-}
-.vditor-toolbar .vditor-toolbar__item button:hover svg {
-    color: #e34f8c;
+.vditor-reset table td {
+    color: #B3C3D3;
 }
 
-/* 对关闭图标的简单美化 */
-.b3-dialog__container svg, .b3-snackbar__close.fn__a {
-    transition: color .2s linear;
-}
-.b3-dialog__container svg:hover, .b3-snackbar__close.fn__a:hover {
-    color: #e34f8c;
-}
-.fn__flex.layout-tab-bar .item svg {
-    transition: background-color .2s linear;
-}
-.fn__flex.layout-tab-bar .item svg:hover {
-    background-color: #e34f8c;
-}
+/* unifiedColor */
 
-/* 对标签页的优化 */
-.layout__resize {
-    margin: -1px;
-}
-#layouts > .fn__flex + .layout__resize::after {
-    display: none;
-}
-.item.item--focus {
-    background-color: #1f2330;
-}
-.fn__flex.layout-tab-bar .item {
-    transition: background-color .2s linear;
-}
-.fn__flex.layout-tab-bar .item:hover {
-    background-color: #ffffff20;
-}
-.fn__flex.layout-tab-bar .item  .item__graphic:hover {
-    background-color: transparent;
-}
-
-/* 对鼠标右键菜单的优化 */
-.b3-menu {
-    border: .35rem solid #414152;
-}
-.b3-menu, .b3-menu .b3-menu__item {
-    background-color: #27273a;
-}
-.b3-menu .b3-menu__item {
-    transition: background-color .2s linear;
-}
-.b3-menu .b3-menu__item:hover {
-    background-color: #e34f8c !important;
-}
-
-/* 对模态框的优化 */
-.b3-dialog__action button {
-    transition: background-color .2s linear;
-}
-.b3-dialog__action button:hover {
-    background-color: #ffffff20;
-}
-
-/* 对input框的优化 */
-.b3-text-filed.fn__block, .b3-text-filed.fn__flex-center.fn__size200 {
-    transition: border .2s linear;
-}
-
-/* 对定位打开的文件、排序的优化 */
-.b3-list__header span {
-    transition: color .2s linear;
-}
-.b3-list__header span:hover {
-    color: #e34f8c;
-}
-
-/* 对右侧、下侧打开的优化 */
-.block__icon svg, .b3-list-item.b3-list-item--hide-action span {
-    transition: color .2s linear !important;
-}
-.block__icon svg:hover {
-    color: #e34f8c !important;
-}
-
-/* 对每个li选中的美化 */
-.b3-list-item.b3-list-item--hide-action {
-    transition: background-color .2s linear !important;
-}
-.b3-list-item.b3-list-item--hide-action:hover {
-    background-color: #ffffff20;
-}
-
-/* 当文章在页签下侧打开时，增强分界感 */
-.fn__flex + .layout__resize::after {
-    min-width: 1px;
-    min-height: 1px;
-    background-color: #414152;
-}
-
-/* 对统计字数的优化 */
-.vditor-counter.b3-tooltips.b3-tooltips__w {
-    background-color: #27273a;
-}
-
-/* 对于滚动条的优化 */
-/* 条纹形 */
-/* ::-webkit-scrollbar-thumb {
-    background-image: repeating-linear-gradient(#e34f8c60,#897691,#e34f8c60 20%);
-    border-radius: 1rem;
-} */
-/* 单色 */
-::-webkit-scrollbar-thumb {
-    background-color: #9876aa70;
-    border-radius: .3rem;
-}
-
-/* 对于resize的优化 */
-.layout__resize--lr.layout__resize {
-    background-color: #41415270;
-    min-width: 1px;
-    max-width: 1px;
-    margin-top: 1px;
-}
-.layout__resize--lr.layout__resize::after {
-    background-color: transparent;
-}
-
-/* 暂改：暴力解决代码块横向滚动条引起的页面拉扯 */
-.vditor-ir__node[data-type="code-block"], .vditor-ir__node[data-type="yaml-front-matter"], .vditor-ir__node[data-type="math-block"] {
-    max-width: 45rem;
-}
-.fn__flex ~ .layout__resize--lr.layout__resize ~ .fn__flex-column .layout-tab-container {
-    background: #333345 !important;
-}
-.fn__flex > .fn__flex-column.fn__flex-shrink:nth-child(1) .layout-tab-container {
-    background: #333345 !important;
-}
-
-/* 增加列表选中后的样式 */
-.b3-list-item.b3-list-item--hide-action, 
-.b3-list--background .b3-list-item--focus, 
-.b3-list-item.b3-list-item--focus,
-.b3-list-item,
-.b3-list-item.b3-list-item--two {
-    border-radius: .5rem;
-    margin-bottom: .2rem;
-    transition: all .2s linear;
-}
-.b3-list-item.b3-list-item--two:hover
-.b3-list.b3-list--background.file-tree,
-.b3-list-item:hover {
-    background-color: #424253 !important;
-}
+/* 设置及开始界面 */
+.b3-list-item.b3-list-item--big:hover,
+.b3-list-item.b3-list-item--big.b3-list-item--focus,
+/* 列表选中的样式 */
 .b3-list-item.b3-list-item--hide-action:hover span:nth-child(2), 
 .b3-list--background .b3-list-item--focus:hover span:nth-child(2),
 .b3-list-item.b3-list-item--hide-action.b3-list-item--focus span:nth-child(2),.b3-list-item.b3-list-item--hide-action.b3-list-item--focus span:nth-child(3),
 .b3-list-item:hover .b3-list-item__text,
-.b3-list-item.b3-list-item--focus span:nth-child(2) {
-    color: #e34f8c;
+.b3-list-item.b3-list-item--focus span:nth-child(2),
+/* 对统计字数的优化 */
+.vditor-counter.b3-tooltips.b3-tooltips__w,
+/* 对定位打开的文件、排序的优化 */
+.b3-list__header span:hover,
+/* 对关闭图标样式的美化 */
+.fn__flex.layout-tab-bar .item svg:hover,
+.b3-dialog__container svg:hover, .b3-snackbar__close.fn__a:hover,
+/* 对工具栏的美化 */
+.vditor-toolbar .vditor-toolbar__item button:hover svg,
+/* 顶栏美化 */
+#toolbar div:hover, .ft__primary:hover,
+/* 标签美化,增强了阅读性 */
+.vditor-ir__tag
+{
+    color: var(--Lavender-highLight-color);
 }
 
-/* 开始页面的项目颜色设置 */
+/* 页签和列表的Hover颜色统一 */
+.b3-list-item.b3-list-item--two:hover
+.b3-list.b3-list--background.file-tree,
+.b3-list-item:hover {
+    background-color: var(--Lavender-tab-background-hover) !important;
+    /* box-shadow: 0 1px 1px var(--Lavender-highLight-color),
+    0 -1px 1px var(--Lavender-highLight-color); */
+}
+
+/* 对关闭图标的美化 -- 背景色 */
+.fn__flex.layout-tab-bar .item svg:hover {
+    background-color: var(--Lavender-highLight-color);
+    color: var(--Lavender-close-color);
+}
+
+/* transition */
+
+/* 设置及开始界面 */
+.b3-list-item.b3-list-item--big,
+/* 列表选中动效 */
+.b3-list-item.b3-list-item--hide-action, 
+.b3-list--background .b3-list-item--focus, 
+.b3-list-item.b3-list-item--focus,
+.b3-list-item,
+.b3-list-item.b3-list-item--two,
+/* 对右侧、下侧打开的优化 */
+.block__icon svg, .b3-list-item.b3-list-item--hide-action span,
+/* 对input框的优化 */
+.b3-text-filed.fn__block, .b3-text-filed.fn__flex-center.fn__size200,
+/* 对标签页的优化 */
+.fn__flex.layout-tab-bar .item,
+/* 对关闭图标的美化 */
+.b3-dialog__container svg, .b3-snackbar__close.fn__a,
+/* 对工具栏的美化 */
+.vditor-toolbar .vditor-toolbar__item button svg,
+/* 顶栏美化 */
+#toolbar div, .ft__primary
+{
+    transition: all .3s linear;
+}
+
+/* 对部分自定义样式根据实际需要做的区别化覆盖 */
 .b3-list-item.b3-list-item--big {
     background-color: transparent !important;
 }
-.b3-list-item.b3-list-item--big span {
-    transition: color .2s linear;
-}
-.b3-list-item.b3-list-item--big:hover span {
-    color: #e34f8c;
+
+/* 美化引用 */
+blockquote {
+    border-left: 0.3em solid var(--Lavender-block-border-color) !important;
+    background-color: var(--Lavender-blockquote-color);
+    padding: 0.5em 1em !important;
 }
 
-/* 优化导出界面的交互 */
-.b3-button.b3-button--white {
-    transition: all .2s linear;
-    background-color:#333345;
-    color: #e6e8eb;
+*[fold="1"] {
+    color: var(--Lavender-block-border-color) !important;
 }
-.b3-button.b3-button--white:hover {
-    color: #e34f8c;
-    background-color: #27273a;
-    box-shadow: none;
-}
-
-/* 对设置界面的简单美化 */
-.b3-list-item.b3-list-item--big {
-    transition: all .2s linear;
-}
-.b3-list-item.b3-list-item--big:hover {
-    color: #e34f8c;
-}
-.b3-list-item.b3-list-item--big svg {
-    transition: none;
-}
-.b3-list-item.b3-list-item--big.b3-list-item--focus {
-    color: #e34f8c;
-}
-
-/* SQL处的颜色优化 */
-.search__path {
-    background-color: #1f2330;
-}
-
-/* 表格颜色优化 */
-/* 方案一 */
-table thead tr {
-    background-color: #44233b !important;
-}
-table tbody tr {
-    background-color: #2e2335 !important;
-}
-/* 方案二 */
-/* table thead tr {
-    background-color: #4d3e38 !important;
-}
-table tbody tr {
-    background-color: #3e3e3a !important;
-} */
