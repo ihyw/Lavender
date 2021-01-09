@@ -141,19 +141,45 @@
 }
 
 /* List */
-.vditor ul, .vditor ol {
-    padding-left: 1.5em;
+@media screen and (max-width: 1280px) {
+    .vditor ul, .vditor ol {
+        padding-left: 1.5rem;
+    }
+    .vditor ul li {
+        list-style-type: disc !important;
+        margin-left: 1rem;
+    }
+    .vditor ol li {
+        margin-left: 1rem;
+    }
+    .vditor ul ol, .vditor ol ol {
+        border-left: .15vw solid #999;
+        margin-left: -1.03vw;
+    }
+    .vditor ul ul, .vditor ol ul {
+        border-left: .15vw solid #999;
+        margin-left: -1.025vw !important;
+    }
 }
-.vditor ul li {
-    list-style-type: disc !important;
-    margin-left: 1em;
-}
-.vditor ol li {
-    margin-left: 1em;
-}
-.vditor ul ul, .vditor ol ul, .vditor ul ol, .vditor ol ol {
-    border-left: 1.5px solid #999;
-    margin-left: -.825em;
+@media screen and (min-width: 1281px) {
+    .vditor ul, .vditor ol {
+        padding-left: 1.5rem;
+    }
+    .vditor ul li {
+        list-style-type: disc !important;
+        margin-left: 1rem;
+    }
+    .vditor ol li {
+        margin-left: 1rem;
+    }
+    .vditor ul ol, .vditor ol ol {
+        border-left: .15vw solid #999;
+        margin-left: -.75vw;
+    }
+    .vditor ul ul, .vditor ol ul {
+        border-left: .15vw solid #999;
+        margin-left: -.85vw !important;
+    }
 }
 
 /* blockRef */
