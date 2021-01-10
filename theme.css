@@ -141,44 +141,113 @@
 }
 
 /* List */
-@media screen and (max-width: 1280px) {
-    .vditor ul, .vditor ol {
-        padding-left: 1.5rem;
-    }
-    .vditor ul li {
-        list-style-type: disc !important;
-        margin-left: 1rem;
-    }
-    .vditor ol li {
-        margin-left: 1rem;
-    }
+.vditor ul, .vditor ol {
+    padding-left: 1.5rem;
+}
+.vditor ul li {
+    list-style-type: disc !important;
+    margin-left: 1rem;
+}
+.vditor ol li {
+    margin-left: 1rem;
+}
+.vditor ul ol, .vditor ol ol, .vditor ul ul, .vditor ol ul {
+    border-left: 1.5px solid var(--Lavender-h-underline-highLight-color);
+}
+@media screen and (max-width: 600px) {
     .vditor ul ol, .vditor ol ol {
-        border-left: .15vw solid #999;
+        margin-left: -2.5vw;
+    }
+    .vditor ul ul, .vditor ol ul {
+        margin-left: -2.5vw !important;
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 700px) {
+    .vditor ul ol, .vditor ol ol {
+        margin-left: -2.05vw;
+    }
+    .vditor ul ul, .vditor ol ul {
+        margin-left: -2.05vw !important;
+    }
+}
+@media screen and (min-width: 701px) and (max-width: 800px) {
+    .vditor ul ol, .vditor ol ol {
+        margin-left: -1.75vw;
+    }
+    .vditor ul ul, .vditor ol ul {
+        margin-left: -1.75vw !important;
+    }
+}
+@media screen and (min-width: 801px) and (max-width: 900px) {
+    .vditor ul ol, .vditor ol ol {
+        margin-left: -1.5vw;
+    }
+    .vditor ul ul, .vditor ol ul {
+        margin-left: -1.55vw !important;
+    }
+}
+@media screen and (min-width: 901px) and (max-width: 1000px) {
+    .vditor ul ol, .vditor ol ol {
+        margin-left: -1.355vw;
+    }
+    .vditor ul ul, .vditor ol ul {
+        margin-left: -1.355vw !important;
+    }
+}
+@media screen and (min-width: 1001px) and (max-width: 1100px) {
+    .vditor ul ol, .vditor ol ol {
+        margin-left: -1.18vw;
+    }
+    .vditor ul ul, .vditor ol ul {
+        margin-left: -1.195vw !important;
+    }
+}
+@media screen and (min-width: 1101px) and (max-width: 1200px) {
+    .vditor ul ol, .vditor ol ol {
+        margin-left: -1.1vw;
+    }
+    .vditor ul ul, .vditor ol ul {
+        margin-left: -1.15vw !important;
+    }
+}
+@media screen and (min-width: 1201px) and (max-width: 1300px) {
+    .vditor ul ol, .vditor ol ol {
         margin-left: -1.03vw;
     }
     .vditor ul ul, .vditor ol ul {
-        border-left: .15vw solid #999;
         margin-left: -1.025vw !important;
     }
 }
-@media screen and (min-width: 1281px) {
-    .vditor ul, .vditor ol {
-        padding-left: 1.5rem;
-    }
-    .vditor ul li {
-        list-style-type: disc !important;
-        margin-left: 1rem;
-    }
-    .vditor ol li {
-        margin-left: 1rem;
-    }
+@media screen and (min-width: 1301px) and (max-width: 1600px){
     .vditor ul ol, .vditor ol ol {
-        border-left: .15vw solid #999;
         margin-left: -.75vw;
     }
     .vditor ul ul, .vditor ol ul {
-        border-left: .15vw solid #999;
         margin-left: -.85vw !important;
+    }
+}
+@media screen and (min-width: 1601px) and (max-width: 1900px) {
+    .vditor ul ol, .vditor ol ol {
+        margin-left: -.7vw;
+    }
+    .vditor ul ul, .vditor ol ul {
+        margin-left: -.75vw !important;
+    }
+}
+@media screen and (min-width: 1901px) and (max-width: 2200px) {
+    .vditor ul ol, .vditor ol ol {
+        margin-left: -.625vw;
+    }
+    .vditor ul ul, .vditor ol ul {
+        margin-left: -.625vw !important;
+    }
+}
+@media screen and (min-width: 2201px) {
+    .vditor ul ol, .vditor ol ol {
+        margin-left: -.57vw;
+    }
+    .vditor ul ul, .vditor ol ul {
+        margin-left: -.57vw !important;
     }
 }
 
@@ -222,7 +291,9 @@
 /* 顶栏美化 */
 #toolbar div:hover, .ft__primary:hover,
 /* 标签美化,增强了阅读性 */
-.vditor-ir__tag
+.vditor-ir__tag,
+/* 美化块引用右上角的可点击项的颜色 */
+.block__icon.b3-tooltips.b3-tooltips__sw:hover
 {
     color: var(--Lavender-highLight-color);
 }
@@ -269,8 +340,14 @@
 }
 
 /* 对部分自定义样式根据实际需要做的区别化覆盖 */
+
+/* 开始页面的列表不需要背景色 */
 .b3-list-item.b3-list-item--big {
     background-color: transparent !important;
+}
+/* 设置界面的svg和文字统一动效 */
+.b3-list-item.b3-list-item--big svg {
+    transition: none;
 }
 
 /* 美化引用 */
