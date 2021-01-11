@@ -142,112 +142,30 @@
 
 /* List */
 .vditor ul, .vditor ol {
-    padding-left: 1.5rem;
+    padding-left: 1.5em;
 }
 .vditor ul li {
     list-style-type: disc !important;
-    margin-left: 1rem;
+    margin-left: 1em;
 }
 .vditor ol li {
-    margin-left: 1rem;
+    margin-left: 1em;
 }
 .vditor ul ol, .vditor ol ol, .vditor ul ul, .vditor ol ul {
     border-left: 1.5px solid var(--Lavender-h-underline-highLight-color);
+
 }
-@media screen and (max-width: 600px) {
-    .vditor ul ol, .vditor ol ol {
-        margin-left: -2.5vw;
-    }
-    .vditor ul ul, .vditor ol ul {
-        margin-left: -2.5vw !important;
-    }
+.vditor ul ol, .vditor ol ol {
+    margin-left: -.8em !important;
 }
-@media screen and (min-width: 601px) and (max-width: 700px) {
-    .vditor ul ol, .vditor ol ol {
-        margin-left: -2.05vw;
-    }
+@media screen and (max-width: 1280px) {
     .vditor ul ul, .vditor ol ul {
-        margin-left: -2.05vw !important;
+        margin-left: -.825em !important;
     }
 }
-@media screen and (min-width: 701px) and (max-width: 800px) {
-    .vditor ul ol, .vditor ol ol {
-        margin-left: -1.75vw;
-    }
+@media screen and (min-width: 1281px) {
     .vditor ul ul, .vditor ol ul {
-        margin-left: -1.75vw !important;
-    }
-}
-@media screen and (min-width: 801px) and (max-width: 900px) {
-    .vditor ul ol, .vditor ol ol {
-        margin-left: -1.5vw;
-    }
-    .vditor ul ul, .vditor ol ul {
-        margin-left: -1.55vw !important;
-    }
-}
-@media screen and (min-width: 901px) and (max-width: 1000px) {
-    .vditor ul ol, .vditor ol ol {
-        margin-left: -1.355vw;
-    }
-    .vditor ul ul, .vditor ol ul {
-        margin-left: -1.355vw !important;
-    }
-}
-@media screen and (min-width: 1001px) and (max-width: 1100px) {
-    .vditor ul ol, .vditor ol ol {
-        margin-left: -1.18vw;
-    }
-    .vditor ul ul, .vditor ol ul {
-        margin-left: -1.195vw !important;
-    }
-}
-@media screen and (min-width: 1101px) and (max-width: 1200px) {
-    .vditor ul ol, .vditor ol ol {
-        margin-left: -1.1vw;
-    }
-    .vditor ul ul, .vditor ol ul {
-        margin-left: -1.15vw !important;
-    }
-}
-@media screen and (min-width: 1201px) and (max-width: 1300px) {
-    .vditor ul ol, .vditor ol ol {
-        margin-left: -1.03vw;
-    }
-    .vditor ul ul, .vditor ol ul {
-        margin-left: -1.025vw !important;
-    }
-}
-@media screen and (min-width: 1301px) and (max-width: 1600px){
-    .vditor ul ol, .vditor ol ol {
-        margin-left: -.75vw;
-    }
-    .vditor ul ul, .vditor ol ul {
-        margin-left: -.85vw !important;
-    }
-}
-@media screen and (min-width: 1601px) and (max-width: 1900px) {
-    .vditor ul ol, .vditor ol ol {
-        margin-left: -.7vw;
-    }
-    .vditor ul ul, .vditor ol ul {
-        margin-left: -.75vw !important;
-    }
-}
-@media screen and (min-width: 1901px) and (max-width: 2200px) {
-    .vditor ul ol, .vditor ol ol {
-        margin-left: -.625vw;
-    }
-    .vditor ul ul, .vditor ol ul {
-        margin-left: -.625vw !important;
-    }
-}
-@media screen and (min-width: 2201px) {
-    .vditor ul ol, .vditor ol ol {
-        margin-left: -.57vw;
-    }
-    .vditor ul ul, .vditor ol ul {
-        margin-left: -.57vw !important;
+        margin-left: -.925em !important;
     }
 }
 
