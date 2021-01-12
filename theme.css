@@ -256,13 +256,9 @@
 /* 顶栏美化 */
 #toolbar div, .ft__primary,
 /* 标签 */
-<<<<<<< HEAD
-span[data-type="tag"] span:nth-child(2)
-=======
 span[data-type="tag"] span:nth-child(2),
 /* 对关闭图标样式的美化 x的颜色 */
 .fn__flex.layout-tab-bar .item svg
->>>>>>> temp
 {
     transition: all .3s linear;
 }
