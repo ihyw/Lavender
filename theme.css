@@ -201,7 +201,6 @@
 /* 对定位打开的文件、排序的优化 */
 .b3-list__header span:hover,
 /* 对关闭图标样式的美化 */
-.fn__flex.layout-tab-bar .item svg:hover,
 .b3-dialog__container svg:hover, .b3-snackbar__close.fn__a:hover,
 /* 对工具栏的美化 */
 .vditor-toolbar .vditor-toolbar__item button:hover svg,
@@ -224,10 +223,14 @@
     0 -1px 1px var(--Lavender-highLight-color); */
 }
 
+/* 对关闭图标样式的美化 x的颜色 */
+.fn__flex.layout-tab-bar .item svg:hover use {
+    color: #ffffff;
+}
+
 /* 对关闭图标的美化 -- 背景色 */
 .fn__flex.layout-tab-bar .item svg:hover {
     background-color: var(--Lavender-highLight-color);
-    color: var(--Lavender-close-color);
 }
 
 /* transition */
@@ -253,7 +256,13 @@
 /* 顶栏美化 */
 #toolbar div, .ft__primary,
 /* 标签 */
+<<<<<<< HEAD
 span[data-type="tag"] span:nth-child(2)
+=======
+span[data-type="tag"] span:nth-child(2),
+/* 对关闭图标样式的美化 x的颜色 */
+.fn__flex.layout-tab-bar .item svg
+>>>>>>> temp
 {
     transition: all .3s linear;
 }
@@ -267,6 +276,13 @@ span[data-type="tag"] span:nth-child(2)
 /* 设置界面的svg和文字统一动效 */
 .b3-list-item.b3-list-item--big svg {
     transition: none;
+}
+/* 标签页的文件图标不需要有hover样式 */
+.fn__flex.layout-tab-bar .item .item__graphic:hover {
+    background-color: transparent;
+}
+.fn__flex.layout-tab-bar .item .item__graphic use {
+    color: var(--b3-theme-on-background) !important;
 }
 
 /* 美化引用 */
@@ -301,3 +317,13 @@ span[data-type="tag"]:hover span:nth-child(2) {
     transform: scale(1.1);
     box-shadow: 0 0 .5em var(--Lavender-h-underline-highLight-color);
 }
+
+/* .vditor-ir p span[data-type="tag"]:nth-child(n) span:nth-child(2) {
+    background-color: red;
+}
+p span[data-type="tag"]:nth-child(2n+1) span:nth-child(2) {
+    background-color: green;
+}
+p span[data-type="tag"]:nth-child(3n+2) span:nth-child(2) {
+    background-color: orange;
+} */
