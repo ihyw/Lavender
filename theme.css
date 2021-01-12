@@ -152,8 +152,7 @@
     margin-left: 1em;
 }
 .vditor ul ol, .vditor ol ol, .vditor ul ul, .vditor ol ul {
-    border-left: 1.5px solid var(--Lavender-h-underline-highLight-color);
-
+    border-left: .1em solid var(--Lavender-h-underline-highLight-color);
 }
 .vditor ul ol, .vditor ol ol {
     margin-left: -.8em !important;
@@ -165,14 +164,14 @@
 }
 @media screen and (min-width: 1281px) {
     .vditor ul ul, .vditor ol ul {
-        margin-left: -.925em !important;
+        margin-left: -.95em !important;
     }
 }
 
 /* blockRef */
 .block__popover, .vditor-ir div[data-type="block-ref-embed"]>div[data-render], .vditor-ir div[data-type="block-query-embed"]>div[data-render] {
     border: 1.35px solid var(--Lavender-block-border-color);
-    border-radius: 0;
+    border-radius: 0; 
 }
 
 /* table */
@@ -202,7 +201,6 @@
 /* 对定位打开的文件、排序的优化 */
 .b3-list__header span:hover,
 /* 对关闭图标样式的美化 */
-.fn__flex.layout-tab-bar .item svg:hover,
 .b3-dialog__container svg:hover, .b3-snackbar__close.fn__a:hover,
 /* 对工具栏的美化 */
 .vditor-toolbar .vditor-toolbar__item button:hover svg,
@@ -225,10 +223,14 @@
     0 -1px 1px var(--Lavender-highLight-color); */
 }
 
+/* 对关闭图标样式的美化 x的颜色 */
+.fn__flex.layout-tab-bar .item svg:hover use {
+    color: #ffffff;
+}
+
 /* 对关闭图标的美化 -- 背景色 */
 .fn__flex.layout-tab-bar .item svg:hover {
     background-color: var(--Lavender-highLight-color);
-    color: var(--Lavender-close-color);
 }
 
 /* transition */
@@ -252,7 +254,11 @@
 /* 对工具栏的美化 */
 .vditor-toolbar .vditor-toolbar__item button svg,
 /* 顶栏美化 */
-#toolbar div, .ft__primary
+#toolbar div, .ft__primary,
+/* 标签 */
+span[data-type="tag"] span:nth-child(2),
+/* 对关闭图标样式的美化 x的颜色 */
+.fn__flex.layout-tab-bar .item svg
 {
     transition: all .3s linear;
 }
@@ -267,6 +273,13 @@
 .b3-list-item.b3-list-item--big svg {
     transition: none;
 }
+/* 标签页的文件图标不需要有hover样式 */
+.fn__flex.layout-tab-bar .item .item__graphic:hover {
+    background-color: transparent;
+}
+.fn__flex.layout-tab-bar .item .item__graphic use {
+    color: var(--b3-theme-on-background) !important;
+}
 
 /* 美化引用 */
 blockquote {
@@ -274,7 +287,39 @@ blockquote {
     background-color: var(--Lavender-blockquote-color);
     padding: 0.5em 1em !important;
 }
+blockquote p {
+    color: var(--Lavender-block-border-color) !important;
+}
 
+/* 加深折叠后的块颜色 */
 *[fold="1"] {
     color: var(--Lavender-block-border-color) !important;
 }
+
+/* Tags */
+span[data-type="tag"] span:nth-child(2) {
+    display: inline-block;
+    font-size: .8em;
+    background-color: var(--Lavender-highLight-color);
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: .1em .5em;
+    margin: .1em .3em;
+    box-sizing: border-box;
+}
+span[data-type="tag"]:hover span:nth-child(2) {
+    transform: scale(1.1);
+    box-shadow: 0 0 .5em var(--Lavender-h-underline-highLight-color);
+}
+
+/* .vditor-ir p span[data-type="tag"]:nth-child(n) span:nth-child(2) {
+    background-color: red;
+}
+p span[data-type="tag"]:nth-child(2n+1) span:nth-child(2) {
+    background-color: green;
+}
+p span[data-type="tag"]:nth-child(3n+2) span:nth-child(2) {
+    background-color: orange;
+} */
