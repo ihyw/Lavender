@@ -323,3 +323,17 @@ p span[data-type="tag"]:nth-child(2n+1) span:nth-child(2) {
 p span[data-type="tag"]:nth-child(3n+2) span:nth-child(2) {
     background-color: orange;
 } */
+
+
+/* 增强标签等部分列表的样式 */
+.vditor-hint.vditor-panel--left, .vditor-hint.b3-list.b3-list--background {
+    /* border: .1em solid var(--Watermelon-block-border-color); */
+    box-shadow: 0 0 .1em var(--Lavender-block-border-color), 0px 11px 15px -7px rgba(0, 0, 0, 0.4);
+}
+.b3-list.b3-list--background.vditor-hint.vditor-panel--arrow div button {
+    box-sizing: border-box;
+}
+.b3-list.b3-list--background.vditor-hint.vditor-panel--arrow div:hover button {
+    font-size: 1em;
+    font-weight: normal;
+}
