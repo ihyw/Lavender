@@ -296,7 +296,9 @@ span[data-type="tag"] span:nth-child(2),
 /* 对关闭图标样式的美化 x的颜色 */
 .fn__flex.layout-tab-bar .item svg,
 /* 对顶部工具栏的美化 */
-.vditor-toolbar__item.b3-tooltips.b3-tooltips__s svg
+.vditor-toolbar__item.b3-tooltips.b3-tooltips__s svg,
+/* Dock栏的hover动画 */
+.dock__item.b3-tooltips.b3-tooltips__e svg, .dock__item.b3-tooltips.b3-tooltips__w svg
 {
     transition: all .3s linear;
 }
@@ -384,4 +386,9 @@ p span[data-type="tag"]:nth-child(3n+2) span:nth-child(2) {
 /* h标签的符号颜色统一 */
 .vditor-ir__marker.vditor-ir__marker--heading {
     color: var(--Lavender-h-highLight-color)
+}
+
+/* Dock栏高亮 */
+.dock__item.b3-tooltips.b3-tooltips__e:hover svg, .dock__item.b3-tooltips.b3-tooltips__w:hover svg {
+    color: var(--Lavender-highLight-color) !important;
 }
