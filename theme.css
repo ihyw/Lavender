@@ -392,3 +392,6 @@ p span[data-type="tag"]:nth-child(3n+2) span:nth-child(2) {
 .dock__item.b3-tooltips.b3-tooltips__e:hover svg, .dock__item.b3-tooltips.b3-tooltips__w:hover svg {
     color: var(--Lavender-highLight-color) !important;
 }
+.dock__item.b3-tooltips.b3-tooltips__e.dock__item--active svg {
+    color: var(--Lavender-highLight-color);
+}
