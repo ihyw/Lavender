@@ -512,8 +512,8 @@ body {
 }
 
 /* SQL查询常显 */
-div[data-type='block-query-embed'].vditor-ir__node .vditor-ir__marker:not([data-type='heading-marker']) {
+/* div[data-type='block-query-embed'].vditor-ir__node .vditor-ir__marker:not([data-type='heading-marker']) {
     color: #9D142090;
     width: auto; height: auto;
     display: inline;
-}
+} */
