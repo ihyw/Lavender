@@ -337,6 +337,8 @@ span[data-type="tag"] span:nth-child(2),
 .vditor-toolbar__item.b3-tooltips.b3-tooltips__s svg,
 /* Dock栏的hover动画 */
 .dock__item.b3-tooltips.b3-tooltips__e svg, .dock__item.b3-tooltips.b3-tooltips__w svg
+/* 折叠菜单页 */
+/* .fn__flex-column.fn__flex-shrink */
 {
     transition: all .3s linear;
 }
@@ -428,8 +430,8 @@ p span[data-type="tag"]:nth-child(3n+2) span:nth-child(2) {
 
 /* v0.6.7背景色统一 */
 /* 增加沉浸感 */
-.fn__flex.layout-tab-bar, .b3-list__header, .block__title + .fn__space.fn__flex-1, .block__icons, #barSearch + .fn__flex-1, #layouts > .layout__resize, #layouts > .layout__resize::after, .layout-tab-container.fn__flex-1, #toolbar {
-    background-color: var(--Lavender-Immersive-color);
+#dockRight, #dockLeft, .fn__flex.layout-tab-bar, .b3-list__header, .block__title + .fn__space.fn__flex-1, .block__icons, #barSearch + .fn__flex-1, #layouts > .layout__resize, #layouts > .layout__resize::after, .layout-tab-container.fn__flex-1, #toolbar {
+    background-color: var(--Lavender-main-color);
 }
 .layout-tab-bar .item--focus {
     background-color: transparent;
@@ -443,7 +445,6 @@ p span[data-type="tag"]:nth-child(3n+2) span:nth-child(2) {
 .b3-tooltips.b3-tooltips__s.block__icon:hover svg {
     color: var(--Lavender-highLight-color)
 }
-
 
 /* Dock栏高亮 */
 .dock__item.b3-tooltips.b3-tooltips__e:hover svg, .dock__item.b3-tooltips.b3-tooltips__w:hover svg {
@@ -479,7 +480,7 @@ body {
 }
 
 /* 对关闭图标样式的美化 */
-.fn__flex.layout-tab-bar .item svg:hover,
+.fn__flex.layout-tab-bar .item svg:nth-child(3):hover,
 .b3-dialog__container svg:hover, .b3-snackbar__close.fn__a:hover {
     color: var(--b3-card-error-background);
     transform: rotate(180deg);
@@ -521,4 +522,17 @@ body {
 /* 设置->快捷键的样式错误修复 */
 .b3-label.file-tree.config-keymap .b3-list-item__graphic.b3-list-item__graphic--arrow {
     pointer-events: none;
+}
+
+/* 列表选中的样式 */
+.b3-list-item.b3-list-item--hide-action:hover span:nth-child(2), 
+.b3-list--background .b3-list-item--focus:hover span:nth-child(2),
+.b3-list-item.b3-list-item--hide-action.b3-list-item--focus span:nth-child(2),.b3-list-item.b3-list-item--hide-action.b3-list-item--focus span:nth-child(3),
+.b3-list-item:hover .b3-list-item__text,
+.b3-list-item.b3-list-item--focus span:nth-child(2)
+{
+    font-size: 1.05em;
+    font-weight: bold;
+    transform-style: preserve-3d;
+    transform: skew(-20deg);
 }
