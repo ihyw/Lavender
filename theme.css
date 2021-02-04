@@ -167,6 +167,12 @@
 }
 
 /* List */
+.vditor div[style$="left:-22px"]:not([title^="段落"]):not([title^="列表项"]) {
+    margin-left: -3em;
+}
+.vditor ul[tip], .vditor ol[tip] {
+    border: none;
+}
 pre ul, pre ol {
     margin-left: -1.5em;
 }
@@ -510,6 +516,9 @@ body {
     font-style: italic;
     /* box-shadow: 0 2px 0 #d3f5d8; */
     /* border-bottom: 2px solid #d3f5d8; */
+}
+.vditor ul[tip], .vditor ol[tip] {
+    margin-left: 0;
 }
 
 /* SQL查询常显 */
