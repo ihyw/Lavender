@@ -168,7 +168,10 @@
 
 /* List */
 .vditor div[style$="left:-22px"]:not([title^="段落"]):not([title^="列表项"]) {
-    margin-left: -3em;
+    margin-left: -44px;
+}
+.vditor div[style$="left:-22px"]:not([title^="段落"]) {
+    margin-left: -22px;
 }
 .vditor ul[tip], .vditor ol[tip] {
     border: none;
