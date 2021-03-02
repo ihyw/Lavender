@@ -512,7 +512,7 @@ body {
 }
 
 /* 命名优化 */
-.vditor-ir--tip *[tip] {
+.vditor-ir--tip *[tip]:not([fold="1"]) {
     box-sizing: border-box;
     padding: 0 20px;
     border-radius: 6px;
@@ -520,7 +520,7 @@ body {
     box-shadow:  5px 5px 6px #10101880,
                  -3px -3px 11px #3e3e5c;
 }
-.vditor-ir--tip *[tip]:before {
+.vditor-ir--tip *[tip]:not([fold="1"]):before {
     color: var(--Lavender-h-highLight-color);
     font-weight: bold;
     background: linear-gradient(to right, var(--Lavender-Immersive-color), #29293c);
