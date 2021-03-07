@@ -168,7 +168,7 @@
 
 /* List */
 .vditor div[style$="left:-22px"]:not([title^="查询块"]):not([title^="嵌入块"]):not([title^="超级块"]):not([title^="引用"]):not([title^="表格"]):not([title^="代码块"]):not([title^="数学公式"]):not([title^="段落"]):not([title^="列表项"]):not([title^="标题"]) {
-    margin-left: -44px;
+    margin-left: 0;
 }
 .vditor div[style$="left:-22px"]:not([title^="段落"]) {
     margin-left: -22px;
