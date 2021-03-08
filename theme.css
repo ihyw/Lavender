@@ -219,10 +219,6 @@ pre ul, pre ol {
     margin-left: -.5em;
     padding-left: 1em;
 } */
-.vditor-reset li p {
-    margin-bottom: 0;
-    padding: 2px 0;
-}
 .vditor ol > li {
     margin-left: 1.1em;
 }
